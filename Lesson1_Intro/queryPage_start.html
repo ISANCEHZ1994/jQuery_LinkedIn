@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> First jQuery-Enabled Page </title>
+    <link rel="stylesheet" href="../style.css" />
+    <script src="../jquery.js"></script>
+
+<script type="text/javascript"> // Here is our jQuery work!
+
+    // NOTE: Both will load into page!
+
+    $("document").ready(function(){
+// The jQuery Library is refereced using the $ symbol
+// document means we want a change on the page itself
+// .ready() sets up an event listener
+        $("#content").append("<p> The page just loaded! </p>"); 
+    })
+// If we open this is the web browser we can see our recent changes!
+
+    // Inserting content the old way using the DOM 
+    window.addEventListener("DOMContentLoaded", function(evt) {
+            var elem = document.getElementById("content");
+            var para = document.createElement("p");
+            var text = document.createTextNode("The page just loaded.");
+            para.appendChild(text);
+            elem.appendChild(para);
+    });
+
+</script>
+    
+</head>
+<body>
+    <h1> First jQuery Page </h1>
+    <div id="content">
+
+    </div>
+</body>
+
+
+</html>
