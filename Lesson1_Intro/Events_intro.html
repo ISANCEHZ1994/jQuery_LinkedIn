@@ -24,7 +24,10 @@
 
         function onMouseClick(evt) {
             $("#example").text(evt.type + ": " + evt.pageX + ", " + evt.pageY);
+            // at the top we are indicating what type of event it is as well as page coordinates
             $("#example").off("mousemove", onMouseOver);
+            // this will turn off the above function
+
         };
 
         function onMouseLeave(evt) {
